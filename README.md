@@ -6,7 +6,7 @@ O PUC-Tools muda a maneira como você interage com seus dados de Atividades Comp
 
 * **Recuperação de Dados Sem Esforço:** 
     * Acesse os dados de suas atividades, incluindo número da atividade, local, datas (início, fim, status) e status atual.
-    * Chega de navegação manual e extração de dados do site da PUC-Rio.
+    * Chega de navegação manual do site da PUC-Rio.
 * **Opções Flexíveis de Acesso:**
     * **Interface de Linha de Comando (CLI):** Ideal para recuperação rápida de dados e acesso em movimento.
     * **API RESTful:** Integre seus dados de atividades com outros aplicativos ou crie painéis personalizados.
