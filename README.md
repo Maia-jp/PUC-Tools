@@ -64,7 +64,3 @@ O PUC-Tools muda a maneira como você interage com seus dados de Atividades Comp
     ```bash
     docker run -it puc-tools python CLI.py <sua_matricula> <sua_senha>
     ```
-
-### Comece a Explorar seus Dados! 🧭
-
-Com o PUC-Tools, você pode facilmente acessar, analisar e utilizar seus dados de Atividades Complementares de diversas maneiras. 
