@@ -1,73 +1,70 @@
-## PUC-Tools
+## PUC-Tools 📚
 
-PUC-Tools simplifies the way you interact with your PUC-Rio Atividades Complementares data, providing both a user-friendly command-line interface and a powerful API for seamless integration. 
+O PUC-Tools muda a maneira como você interage com seus dados de Atividades Complementares da PUC-Rio, oferecendo uma interface de linha de comando amigável e uma API poderosa para integração perfeita. 
 
-### Features ✨
+### Recursos ✨
 
-* **Effortless Data Retrieval:** 
-    * Access your activities data, including activity number, location, dates (start, end, status), and current status.
-    * No more manual navigation and data extraction from the PUC-Rio website.
-* **Flexible Access Options:**
-    * **Command-Line Interface (CLI):** Ideal for quick data retrieval and on-the-go access.
-    * **RESTful API:** Integrate your activities data with other applications or build custom dashboards.
-* **Seamless Automation:**
-    * Playwright handles data extraction behind the scenes, ensuring a smooth and efficient experience.
-* **Docker Ready:**
-    * The provided Dockerfile simplifies deployment and ensures consistent execution across environments. 
+* **Recuperação de Dados Sem Esforço:** 
+    * Acesse os dados de suas atividades, incluindo número da atividade, local, datas (início, fim, status) e status atual.
+    * Chega de navegação manual e extração de dados do site da PUC-Rio.
+* **Opções Flexíveis de Acesso:**
+    * **Interface de Linha de Comando (CLI):** Ideal para recuperação rápida de dados e acesso em movimento.
+    * **API RESTful:** Integre seus dados de atividades com outros aplicativos ou crie painéis personalizados.
+* **Automação Perfeita:**
+    * O Playwright lida com a extração de dados nos bastidores, garantindo uma experiência tranquila e eficiente.
+* **Pronto para Docker:**
+    * O Dockerfile fornecido simplifica a implantação e garante uma execução consistente em diferentes ambientes. 
 
-### Getting Started 🚀
+### Como Começar 🚀
 
-**1. Setup**
+**1. Configuração**
 
-* **Prerequisites:** Ensure you have Python 3.10+ installed.
-* **Install Dependencies:** 
-    * Open your terminal and navigate to the project directory.
-    * Run: `pip install -r requirements.txt`
+* **Pré-requisitos:** Certifique-se de ter o Python 3.10+ instalado.
+* **Instale as Dependências:** 
+    * Abra seu terminal e navegue até o diretório do projeto.
+    * Execute: `pip install -r requirements.txt`
 
-**2. Using the Command-Line Interface (CLI):**
+**2. Usando a Interface de Linha de Comando (CLI):**
 
-* **Retrieve Your Data:**
-    * In your terminal, run: 
+* **Recupere Seus Dados:**
+    * No seu terminal, execute: 
     ```bash
-    python CLI.py <your_matricula> <your_senha>
+    python CLI.py <sua_matricula> <sua_senha>
     ```
-    * Replace `<your_matricula>` and `<your_senha>` with your actual PUC-Rio credentials.
-    * Add the `--headless` flag if you prefer to run the browser in the background:
-    ```bash
-    python CLI.py <your_matricula> <your_senha> --headless 
-    ``` 
+    * Substitua `<sua_matricula>` e `<sua_senha>` por suas credenciais PUC-Rio.
+    * Seus dados de atividades serão exibidos no terminal. 
 
-**3. Using the API:**
+**3. Usando a API (Opcional):**
 
-* **Run the API Server:**
-    * In your terminal, run:
+* **Execute o Servidor API:**
+    * No seu terminal, execute: 
     ```bash
     python main.py
-    ``` 
-    * This will start the API server, typically on `http://127.0.0.1:5000/`.
-* **Retrieve Data via API Endpoint:**
-    * Send a GET request to the `/api/atividades` endpoint, including your credentials in the headers:
-    ```bash
-    curl -X GET http://127.0.0.1:5000/api/atividades \
-        -H "Matricula: <your_matricula>" \
-        -H "Senha: <your_senha>"
     ```
+* **Acesse a API:**
+    * A API estará disponível em `http://localhost:5000/api/atividades`.
+    * Você precisará fornecer sua matrícula e senha nos cabeçalhos da solicitação.
+    * Consulte o código `main.py` para obter mais detalhes sobre o uso da API. 
 
-**4. Docker Deployment (Optional):**
+**4. Opções Adicionais:**
 
-* **Build the Docker Image:**
-    * In your terminal, run:
+* **Modo Headless:** 
+    * Para executar o Playwright sem uma janela do navegador visível, adicione a flag `--headless` ao comando CLI:
+    ```bash
+    python CLI.py <sua_matricula> <sua_senha> --headless 
+    ``` 
+
+### Docker 🐳
+
+* **Construa a Imagem Docker:**
     ```bash
     docker build -t puc-tools .
     ```
-* **Run the Docker Container:**
-    * You can then run the container with:
+* **Execute o Container:**
     ```bash
-    docker run -p 5000:5000 puc-tools
+    docker run -it puc-tools python CLI.py <sua_matricula> <sua_senha>
     ```
-    * Access the API at `http://localhost:5000/api/atividades` with your credentials in the headers as shown above.
 
-### Contributing and Support 🤝
+### Comece a Explorar seus Dados! 🧭
 
-* Feel free to fork the repository and contribute to its development.
-* For any questions or support, please open an issue on the GitHub repository.
+Com o PUC-Tools, você pode facilmente acessar, analisar e utilizar seus dados de Atividades Complementares de diversas maneiras. 
